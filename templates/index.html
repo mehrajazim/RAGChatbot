@@ -1,0 +1,24 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RAG Chatbot</title>
+</head>
+<body>
+  <h1>RAG Chatbot</h1>
+  
+  <!-- Form for uploading a PDF -->
+  <h2>Upload PDF</h2>
+  <form action="/upload_pdf" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="application/pdf">
+    <button type="submit">Upload PDF</button>
+  </form>
+  
+  <!-- Form for asking a question -->
+  <h2>Ask a Question</h2>
+  <form action="/ask" method="post">
+    <input type="text" name="question" placeholder="Enter your question" required>
+    <button type="submit">Submit Question</button>
+  </form>
+</body>
+</html>
