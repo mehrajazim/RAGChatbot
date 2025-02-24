@@ -8,10 +8,6 @@ This project implements a Retrieval-Augmented Generation (RAG) chatbot using an 
 - [Architecture](#architecture)
 - [Tech Stack](#tech-stack)
 - [Setup and Installation](#setup-and-installation)
-- [Running the Application](#running-the-application)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [License](#license)
 
 ## Overview
 
@@ -43,40 +39,49 @@ This project follows the **MVC pattern**:
 
 1. **Clone the Repository:**
 
-   ```bash
-   git clone https://github.com/yourusername/RAG_CHATBOT_MVC.git
-   cd RAG_CHATBOT_MVC
+```bash
+git clone https://github.com/mehrajazim/RAGChatbot.git
+cd RAG_CHATBOT_MVC
+```
 2.  **Create and Activate a Virtual Environment**
     
-    python -m venv venv
-    ```On mac/Linux:
-    source venv/bin/activate
-    On Windows:
-    venv\Scripts\activate
+```bash
+python -m venv venv
+```
+On mac/Linux:
+```bash
+source venv/bin/activate
+```
+On Windows:
+```bash
+venv\Scripts\activate
+```
 3.  **Install Dependencies:**
-    
-    pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+```
 4.  **Set Environment Variables:**
-
-    PINECONE_API_KEY=your-pinecone-api-key
-    PINECONE_ENV=us-east-1
-    PINECONE_INDEX=your-index-name
-    GENAI_API_KEY=your-gemini-api-key
-
+```python
+PINECONE_API_KEY=your-pinecone-api-key
+PINECONE_ENV=us-east-1
+PINECONE_INDEX=your-index-name
+GENAI_API_KEY=your-gemini-api-key
+```
 5. **Verify the Configuration**
 
-'''
-    import os
-    from dotenv import load_dotenv
+```python
+import os
+from dotenv import load_dotenv
 
-    load_dotenv()
+load_dotenv()
 
-    print("Pinecone API Key:", os.getenv("PINECONE_API_KEY"))
-    print("Pinecone Env:", os.getenv("PINECONE_ENV"))
-    print("Pinecone Index:", os.getenv("PINECONE_INDEX"))
-    print("Gemini API Key:", os.getenv("GENAI_API_KEY"))
-'''
+print("Pinecone API Key:", os.getenv("PINECONE_API_KEY"))
+print("Pinecone Env:", os.getenv("PINECONE_ENV"))
+print("Pinecone Index:", os.getenv("PINECONE_INDEX"))
+print("Gemini API Key:", os.getenv("GENAI_API_KEY"))
+```
 6. **Start the Application**
-
-    uvicorn app:app --reload
-    After the server starts, you can access the API documentation at http://127.0.0.1:8000/docs and the web interface at http://127.0.0.1:8000/.
+```bash
+uvicorn app:app --reload
+```
+After the server starts, you can access the API documentation at http://127.0.0.1:8000/docs and the web interface at http://127.0.0.1:8000/.
